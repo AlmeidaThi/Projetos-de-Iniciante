@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabuada</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+
+        <div>
+            <p></p>
+            <p>Informe o número a ser multiplicado:</p>
+
+
+            <!-- local para o usuário inserir o número-->
+            <input id="number" type="number" id="number" placeholder="0">
+
+            <!-- botão que faz o cálculo da multiplicação -->
+            <button type="submit" onclick="calc()">Calcular</button>
+
+            <!-- botão que limpa a exibição do resultado -->
+            <button type="reset" onclick="limpa()">Limpar</button>
+            
+            <p></p>
+
+            <!-- local que será exibido o resultado -->
+            <div id='div_resultado' style='display:inline'></div>
+
+
+        </div>
+
+        <script language="Javascript">
+
+            function calc() {
+
+                /* Definicao das variaveis */
+                var js_nummulti = document.getElementById('number').value;
+                var js_resultado = document.getElementById('div_resultado');
+                var js_calc_final = '';
+
+                for(var js_contador=1; js_contador<=10 ; js_contador++){
+                    js_calc_final += js_nummulti+" x "+js_contador+" = "+js_nummulti*js_contador+"<br />";  
+                    div_resultado.innerHTML = js_calc_final;           
+                }
+                 
+            }
+
+            function limpa() {
+                var js_calc_final = '';
+                                 
+                div_resultado.innerHTML = js_calc_final;
+                number.value = '0';
+
+
+            }
+
+
+        </script>
+    </body>
+</html>
